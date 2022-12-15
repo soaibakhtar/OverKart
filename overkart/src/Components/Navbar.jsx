@@ -23,6 +23,7 @@ import {
   Stack,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+import HomePage from '../Pages/HomePage';
 
 const Links = ['Dashboard', 'Projects', 'Team'];
 
@@ -91,7 +92,8 @@ export default function Simple() {
         </Flex>
       </Box>
 
-      <Box p={4}>Main Content Here</Box>
+      {/* <Box p={4}>Main Content Here</Box> */}
+      <HomePage/>
     </>
   );
 }
