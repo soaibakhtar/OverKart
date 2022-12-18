@@ -4,6 +4,7 @@ import { Grid, GridItem } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
 // import Slider from "../Components/Carousel";
 import Carousel from "../Components/Carousel";
+import Footer from "../Components/Footer";
 function HomePage() {
   let BrandImg = [
     "https://ak1.ostkcdn.com/img/mxc/111522-NinjaLogo.svg?imwidth=1920",
@@ -79,6 +80,21 @@ function HomePage() {
       Title: "Shop All Deals",
     },
   ];
+
+  let TrendingText = [
+    "Mugs",
+    "Blankets",
+    "Cookie Cutters",
+    "Air Fryers",
+    "Kitchen Mixers",
+    "Lamps",
+    "Towels",
+    "Tree Skirts",
+    "Garland",
+    "Fall Wreaths",
+    "Christmas Trees",
+    "Fireplaces"
+  ];
   return (
     <div className="Home_Container" style={{ marginTop: "90px" }}>
       {/* First Section Image */}
@@ -125,7 +141,6 @@ function HomePage() {
             <div
               style={{
                 justifyContent: "center",
-                border: "2px solid red",
                 backgroundImage: `url("https://ak1.ostkcdn.com/img/mxc/12032022_HB_INTL-CAN_1.jpg?imwidth=1920")`,
               }}
             >
@@ -139,7 +154,6 @@ function HomePage() {
             <div
               style={{
                 justifyContent: "center",
-                border: "2px solid red",
                 backgroundImage: `url("https://ak1.ostkcdn.com/img/mxc/12032022_HB_INTL-CAN_2.jpg?imwidth=1920")`,
               }}
             >
@@ -153,7 +167,6 @@ function HomePage() {
             <div
               style={{
                 justifyContent: "center",
-                border: "2px solid red",
                 backgroundImage: `url("https://ak1.ostkcdn.com/img/mxc/12032022_HB_INTL-CAN_3.jpg?imwidth=1920")`,
               }}
             >
@@ -167,7 +180,6 @@ function HomePage() {
             <div
               style={{
                 justifyContent: "center",
-                border: "2px solid red",
                 backgroundImage: `url("https://ak1.ostkcdn.com/img/mxc/12032022_HB_INTL-CAN_4.jpg?imwidth=1920")`,
               }}
             >
@@ -181,7 +193,6 @@ function HomePage() {
             <div
               style={{
                 justifyContent: "center",
-                border: "2px solid red",
                 backgroundImage: `url("https://ak1.ostkcdn.com/img/mxc/12032022_HB_INTL-CAN_5.jpg?imwidth=1920")`,
               }}
             >
@@ -195,7 +206,6 @@ function HomePage() {
             <div
               style={{
                 justifyContent: "center",
-                border: "2px solid red",
                 backgroundImage: `url("https://ak1.ostkcdn.com/img/mxc/12032022_HB_INTL-CAN_6.jpg?imwidth=1920")`,
               }}
             >
@@ -218,7 +228,6 @@ function HomePage() {
         style={{
           width: "95%",
           margin: "auto auto 40px auto",
-          border: "2px solid teal",
         }}
       >
         <Grid
@@ -279,7 +288,6 @@ function HomePage() {
         style={{
           width: "95%",
           margin: "auto auto 40px auto",
-          border: "2px solid teal",
         }}
       >
         <Grid
@@ -482,7 +490,45 @@ function HomePage() {
 
       
       {/* Trending Searches */}
-      
+      <h1
+        style={{ fontSize: "30px", fontWeight: "700", margin: "30px 0 30px 0" }}
+      >
+        Trending Searches
+      </h1>
+      <Flex
+        style={{
+          width: "95%",
+          margin: "auto auto 40px auto",
+        }}
+      >
+        <Grid
+          templateColumns="repeat(3, 1fr)"
+          gap={4}
+          style={{ margin: "auto" }}
+        >
+          {TrendingText?.length > 0 &&
+            TrendingText.map((e) => {
+              return (
+                <GridItem key={e.id}>
+                  <div style={{width:"470px",padding:"10px 20px 10px 20px",gap:"10px",backgroundColor:"#F5F6F7"}}>
+                  <h3 style={{fontSize:"28px",color:"#545658",fontWeight:"600"}}>{e}</h3>
+                  </div>
+                </GridItem>
+              );
+            })}
+        </Grid>
+      </Flex>
+
+            {/* Hr line */}
+
+            <div style={{borderTop:"2px solid #e1e3e1",hight:"5px",margin:"auto atuo 10px auto",padding:"20px"}}>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+
+            {/* Footer */}
+            <Footer/>
     </div>
   );
 }
