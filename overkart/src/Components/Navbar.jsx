@@ -57,7 +57,7 @@ export default function Simple() {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={"center"}>
-            <Box fontSize={50}>OverKart</Box>
+            <Box fontSize={50}>Over<span style={{color:"red"}}>Kart</span></Box>
             <HStack >
                 <InputGroup size={"sm"}  alignItems={"center"} justifyContent="center">
                 <Input focusBorderColor='none' _focus={"none"} size={"sm"}  width={1000} type="text" placeholder='Search... everything you find ships for free'  />
